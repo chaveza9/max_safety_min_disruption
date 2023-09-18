@@ -148,65 +148,74 @@
   </div>
 </section>
 
-
 <section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <!-- Vehicle Selection Diagram -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-full-width">Vehicle Selection Diagram</h2>
-          <img src="./static/images/vehicle_diagram.png"
+    <!-- Problem Setting -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Summary</h2>
+        <img src="./static/images/diagram_fxt_ocbf.png"
             class="center-image simulation-image"
-            alt="TODO: alt text"/>
+            alt="Optimal Control Methodology Diagram"/>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+          <p>
+            Previous work has focused on selecting optimal cooperative groups and gaps but assumes constant uncooperative vehicle behavior. Other methods using control barrier functions can ensure safety but are overly conservative, losing efficiency.
+          </p>
+          <p>
+            This paper aims to address the trade-off between safety and efficiency. The key ideas are:
+          </p>
+          <p>
+            <ul>
+              <li> Use optimal control with control barrier functions (OCBFs) to get near-optimal, safe lane change trajectories.</li>
+              <li> Incorporate spatio-temporal constraints to ensure the vehicle completes the maneuver in time.</li>
+              <li> Handle disturbances from uncooperative vehicles through duality theory.</li>
+              <li> Extend prior work on minimum disruption cooperative maneuvers to lane-changing scenarios.</li>
+            </ul>
+          </p>
+          <p>
+            The overall contribution is a method to enable cooperative lane changes that are safe despite disturbances while minimizing the disruption to surrounding traffic. This combines optimal and robust control with multi-vehicle coordination.
+          </p>          
         </div>
       </div>
-     
-      <!-- Summary -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-full-width">Summary</h2>
-          <img src="./static/images/diagram_fxt_ocbf.png"
-            class="center-image simulation-image"
-            alt="The paper focuses on enabling cooperative lane-changing maneuvers for connected autonomous vehicles (CAVs) in mixed traffic environments with human drivers. The goal is to perform these lane changes in a way that minimizes disruption to overall traffic flow. Disruption refers to the cumulative effect of vehicles decelerating during the lane change, which can propagate through traffic and reduce efficiency.
-
-Previous work has focused on selecting optimal cooperative groups and gaps but assumes constant uncooperative vehicle behavior. Other methods using control barrier functions can ensure safety but are overly conservative, losing efficiency.
-
-This paper aims to address the trade-off between safety and efficiency. The key ideas are:
-
-    - Use optimal control with control barrier functions (OCBFs) to get near-optimal, safe lane change trajectories.
-    - Incorporate spatio-temporal constraints to ensure the vehicle completes the maneuver in time.
-    - Handle disturbances from uncooperative vehicles through duality theory.
-    - Extend prior work on minimum disruption cooperative maneuvers to lane-changing scenarios.
-
-The overall contribution is a method to enable cooperative lane changes that are safe despite disturbances while minimizing the disruption to surrounding traffic. This combines optimal and robust control with multi-vehicle coordination."/>
-        </div>
-      </div>
-      <!--/ Summary -->
-      <!-- Problem Setting -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-full-width">Summary</h2>
-          <img src="./static/images/vehicle_diagram.png"
-            class="center-image simulation-image"
-            alt="Autonomous vehicles that are capable of cooperating with vehicle C are defined as the set S(t) = {1,...,N}. This set contains N vehicles, with vehicles 1 and N being the farthest ahead and behind C, respectively. The vehicles in S(t) can sense the state of the uncooperative vehicles U and F.
-
-When determining the optimal longitudinal maneuver, a subset of vehicles S(tf) in the vicinity of C at the terminal time tf is considered. The goal is to create a minimally disruptive safe gap between a pair of vehicles i* and i*+1 in S(tf) so that C can merge into the fast lane. The optimal i* and i*+1 are determined by solving a mixed integer nonlinear program.
-
-Therefore, the key aspects of the grouping are:
-
-    - S(t) defines the set of all cooperative vehicles near C
-    - S(tf) ⊆ S(t) represents the relevant cooperative vehicles at the end of the longitudinal maneuver
-    - An optimal pair (i*, i*+1) in S(tf) is chosen for C to merge between
-
-The grouping enables coordinated cooperation to create a safe gap for C's lane change while minimizing disruption."/>
-        </div>
-      </div>
-      <!--/ Problem Setting -->
+    </div>
+    <!--/ Problem Setting  -->
   </div>
-
-    
+</section>
+  
+<section class="section">
+    <!-- CAV Group -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Summary</h2>
+        <img src="./static/images/vehicle_diagram.png"
+            class="center-image simulation-image"
+            alt="Optimal Control Methodology Diagram"/>
+        <div class="content has-text-justified">
+          <p>
+            Autonomous vehicles that are capable of cooperating with vehicle C are defined as the set S(t) = {1,...,N}. This set contains N vehicles, with vehicles 1 and N being the farthest ahead and behind C, respectively. The vehicles in S(t) can sense the state of the uncooperative vehicles U and F.
+          </p>
+          <p>
+            When determining the optimal longitudinal maneuver, a subset of vehicles S(tf) in the vicinity of C at the terminal time tf is considered. The goal is to create a minimally disruptive safe gap between a pair of vehicles i* and i*+1 in S(tf) so that C can merge into the fast lane. The optimal i* and i*+1 are determined by solving a mixed integer nonlinear program.
+          </p>
+          <p>
+            Therefore, the key aspects of the grouping are:
+          </p>
+          <p>
+            <ul>
+              <li> S(t) defines the set of all cooperative vehicles near C</li>
+              <li> S(tf) ⊆ S(t) represents the relevant cooperative vehicles at the end of the longitudinal maneuver</li>
+              <li> An optimal pair (i*, i*+1) in S(tf) is chosen for C to merge between</li>
+          </p>
+          <p>
+              The grouping enables coordinated cooperation to create a safe gap for C's lane change while minimizing disruption
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ CAV Group  -->
+  </div>
 </section>
 
 
